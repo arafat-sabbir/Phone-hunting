@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme = 'cupcake'>
+<html lang="en" data-theme='cupcake'>
 
 <head>
     <meta charset="UTF-8">
@@ -13,11 +13,29 @@
 
 <body>
     <header>
-        <h1 class="text-center text-4xl mt-5">Phone hunting</h1>
+        <h1 class="text-center text-4xl my-5 font-semibold">Phone hunting</h1>
     </header>
 
-    <main>
-
+    <main class="container mx-auto mt-8">
+          <!-- Search section -->
+        <div class="p-4 m-4 bg-gray-100 text-center">
+            <input id="input-field" type="text" placeholder="Search Here" class="input input-bordered input-info w-full max-w-xs" />
+            <button onclick="searchdata()" id="search-btn" class="btn btn-success">Search</button>
+        </div>
+        <!-- search result -->
+        <section>
+            <div id="spinner" class="text-center my-36 hidden">
+                <span class="loading loading-spinner text-success"></span>
+            </div>
+            <div id="phones-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+        </section>
+        <!-- show all button -->
+        <div id="showallfield" class="hidden my-8 text-center">
+            <button class="btn btn-success">Show All</button>
+        </div>
+      
+            
     </main>
 
     <!-- script file here  -->
